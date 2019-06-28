@@ -10,7 +10,8 @@ This will be a functional react app that will show the available jobs on GitHub 
 
 ## MVP:
 - Using the GitHub API, the user can search for available jobs posted on GitHub and narrow that search by specifying the location and the type of job.
-- The app will contain a search bar where input can be taken about parameters, and a button will show the resulting jobs on the page 
+- The app will contain a search bar, and a button will show the resulting jobs on the page.
+- The job posting can be clicked on to go to a different page with more information about the job.
 
 ## PostMVP 
 - A "heart" next to each job posting will save that specific job to a page called "my jobs", where the user can store their favorites 
