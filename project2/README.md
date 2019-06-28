@@ -6,7 +6,7 @@
 This will be a functional react app that will show the latest trending news stories.
 
 ## Wireframes:
-[Imgur](https://i.imgur.com/bnteKR9.png)
+![](https://i.imgur.com/bnteKR9.png)
 
 ## MVP:
 - Use news api
