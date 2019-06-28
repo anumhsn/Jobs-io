@@ -1,4 +1,4 @@
-![](https://giphy.com/gifs/fVeo7iZldhfxC94Hwh/html5)
+![](https://media.giphy.com/media/fVeo7iZldhfxC94Hwh/giphy.gif)
 
 ## Project Overview
 
