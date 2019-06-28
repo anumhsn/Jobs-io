@@ -13,17 +13,11 @@ class App extends React.Component{
     }
   }
 
-  componentDidMount = async () => {
-    const jobs = await fetchJobs();
+  showJobs = async (location) => {
+    const jobs = await fetchJobs(location);
     this.setState({
       jobs: jobs
-    })
-
-    console.log(this.state.jobs);
-  }
-  
-  showJobs = async () => {
-    
+    })  
   }
   
   render(){
@@ -33,7 +27,11 @@ class App extends React.Component{
           <Header />
         </header>
         <main>
-          <Search />
+          <Search 
+          // fetchJobs={this.props.fetchJobs}
+          showJobs={this.showJobs}
+          jobs={this.state.jobs}
+          />
         </main>
         
       </div>

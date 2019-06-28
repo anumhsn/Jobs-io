@@ -1,4 +1,5 @@
 import React from 'react'
+import {fetchJobs} from '../services/api-helper'
 
 class Search extends React.Component{
     constructor(props){
@@ -19,10 +20,22 @@ class Search extends React.Component{
     render(){
         return(
             <div className="search">
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={(e)=>{
+                    e.preventDefault();
+                    this.props.showJobs(this.state.location)
+                }}>
                     <input name="location" placeholder="location..." type="text" onChange={this.handleChange}/>
-                    
+                    <button>Search</button>
                 </form>
+
+                {
+                    this.props.jobs.map((info) => (
+                        <div className="job-info" key={info.id}>
+                            <p>{info.title} at {info.company}</p>
+                            <p>Job Type: {info.type}</p>
+                        </div>
+                    ))
+                }
             </div>
         )
     }
