@@ -22,6 +22,9 @@ class App extends React.Component{
     console.log(this.state.jobs);
   }
   
+  showJobs = async () => {
+    
+  }
   
   render(){
     return (

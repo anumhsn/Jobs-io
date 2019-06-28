@@ -13,11 +13,13 @@ class Search extends React.Component{
             [e.target.name]: e.target.value
         })
     }
+
+    handleSubmit
     
     render(){
         return(
             <div className="search">
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <input name="location" placeholder="location..." type="text" onChange={this.handleChange}/>
                     
                 </form>
