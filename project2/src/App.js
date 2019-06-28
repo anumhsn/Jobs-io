@@ -1,36 +1,38 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-// const api = "54cc1ef81e194b66a254facc9974f1bf";
+import {fetchJobs} from './services/api-helper';
+import Header from './components/Header';
+import Search from './components/Search';
 
 class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      blah: []
+      jobs: []
     }
-  }
-  
-  fetchData = async() => {
-    const response = await axios.get("https://cors-anywhere.herokuapp.com/jobs.github.com/positions.json?lat=37.3229978&long=-122.0321823");
-    
-    return response.data;
   }
 
   componentDidMount = async () => {
-    const blah = await this.fetchData();
+    const jobs = await fetchJobs();
     this.setState({
-      blah: blah
+      jobs: jobs
     })
-    debugger;
-    console.log(this.state.blah);
+
+    console.log(this.state.jobs);
   }
   
   
   render(){
     return (
       <div className="App">
-        <h1>Job Search</h1>
+        <header>
+          <Header />
+        </header>
+        <main>
+          <Search jobs={this.state.jobs}/>
+        </main>
+        
       </div>
     );
   }
