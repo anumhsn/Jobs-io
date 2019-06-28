@@ -30,7 +30,7 @@ class App extends React.Component{
           <Header />
         </header>
         <main>
-          <Search jobs={this.state.jobs}/>
+          <Search />
         </main>
         
       </div>
