@@ -6,7 +6,7 @@
 This will be a functional react app that will show the available jobs based on location, type of job, and whether its full time or not
 
 ## Wireframes:
-![](https://imgur.com/fp2bzMP)
+![](https://i.imgur.com/fp2bzMP.png)
 
 ## MVP:
 - Use Github jobs api
