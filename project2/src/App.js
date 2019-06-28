@@ -12,7 +12,7 @@ class App extends React.Component{
   }
   
   fetchData = async() => {
-    const response = await axios.get("https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-28&sortBy=publishedAt&apiKey=54cc1ef81e194b66a254facc9974f1bf");
+    const response = await axios.get("https://cors-anywhere.herokuapp.com/jobs.github.com/positions.json?lat=37.3229978&long=-122.0321823");
     
     return response.data;
   }
@@ -30,7 +30,7 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
-        <h1>hey</h1>
+        <h1>Job Search</h1>
       </div>
     );
   }
