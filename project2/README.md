@@ -1,8 +1,6 @@
-
+![](https://media.giphy.com/media/fVeo7iZldhfxC94Hwh/giphy.gif)
 
 ## Project Overview
-
-![](https://media.giphy.com/media/fVeo7iZldhfxC94Hwh/giphy.gif)
 
 ## Project Description:
 This will be a functional react app that will show the latest trending news stories.
