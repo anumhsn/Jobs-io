@@ -10,14 +10,16 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state={
-      jobs: []
+      jobs: [],
+      // description: ''
     }
   }
 
-  showJobs = async (location) => {
-    const jobs = await fetchJobs(location);
+  showJobs = async (description, location) => {
+    const jobs = await fetchJobs(description, location);
     this.setState({
-      jobs: jobs
+      jobs: jobs,
+      // description: description
     })  
   }
   
@@ -33,6 +35,7 @@ class App extends React.Component{
           showJobs={this.showJobs}
           jobs={this.state.jobs}
           />
+
         </main>
         <footer>
           <Footer />

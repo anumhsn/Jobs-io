@@ -5,7 +5,8 @@ class Search extends React.Component{
     constructor(props){
         super(props);
         this.state={
-            location: ''
+            location: '',
+            description: ''
         }
     }
 
@@ -22,9 +23,12 @@ class Search extends React.Component{
             <div className="search">
                 <form className="input" onSubmit={(e)=>{
                     e.preventDefault();
-                    this.props.showJobs(this.state.location)
+                    this.props.showJobs(this.state.description, this.state.location)
+                    // this.props.showJobs()
+
                 }}>
                     <input name="location" placeholder="location..." type="text" onChange={this.handleChange}/>
+                    <input name="description" placeholder="keyword (e.g. JavaScript)" type="text" onChange={this.handleChange} />
                     <button>Search</button>
                 </form>
 
@@ -34,6 +38,7 @@ class Search extends React.Component{
                             <img src={info.company_logo} />
                             <p>{info.title} at {info.company}</p>
                             <p>Job Type: {info.type}</p>
+
                         </div>
                     ))
                 }
