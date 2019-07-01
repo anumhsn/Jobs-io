@@ -1,8 +1,51 @@
+body{
+  margin: 0;
+}
+
 .App {
   text-align: center;
 }
 
+/* HEADER */
+.header{
+  font-family: 'Megrim', cursive;
+  font-size: 35px;
+  color: white;
 
+}
+
+.header, .input {
+  /* background color taken from https://uigradients.com/#Zinc */
+  background: #FFA17F;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #00223E, #FFA17F);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #00223E, #FFA17F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  padding: 10px;
+}
+
+input{
+  margin-bottom: 25px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+  margin: 10px;
+  
+}
+
+button{
+  padding: 5px;
+  border-radius: 10px;
+  width: 65px;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button:hover {
+  background-color: black; /* Green */
+  color: white;
+}
+
+/* SEARCH RESULTS */
 .job-info{
   border: 1px solid black;
   /* box-sizing: border-box;  */
@@ -13,6 +56,13 @@
   border-radius: 10px;
 }
 
-input{
-  margin-bottom: 25px;
+.job-info img{
+  height: 100px;
+  width: auto;
 }
+
+.footer{
+  height: 80vh;
+}
+
+

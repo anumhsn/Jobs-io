@@ -20,7 +20,7 @@ class Search extends React.Component{
     render(){
         return(
             <div className="search">
-                <form onSubmit={(e)=>{
+                <form className="input" onSubmit={(e)=>{
                     e.preventDefault();
                     this.props.showJobs(this.state.location)
                 }}>
@@ -31,6 +31,7 @@ class Search extends React.Component{
                 {
                     this.props.jobs.map((info) => (
                         <div className="job-info" key={info.id}>
+                            <img src={info.company_logo} />
                             <p>{info.title} at {info.company}</p>
                             <p>Job Type: {info.type}</p>
                         </div>

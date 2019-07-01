@@ -4,6 +4,7 @@ import './App.css';
 import {fetchJobs} from './services/api-helper';
 import Header from './components/Header';
 import Search from './components/Search';
+import Footer from './components/Footer';
 
 class App extends React.Component{
   constructor(props){
@@ -33,6 +34,9 @@ class App extends React.Component{
           jobs={this.state.jobs}
           />
         </main>
+        <footer>
+          <Footer />
+        </footer>
         
       </div>
     );
