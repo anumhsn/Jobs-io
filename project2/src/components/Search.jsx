@@ -15,8 +15,6 @@ class Search extends React.Component{
             [e.target.name]: e.target.value
         })
     }
-
-    handleSubmit
     
     render(){
         return(
@@ -32,16 +30,19 @@ class Search extends React.Component{
                     <button>Search</button>
                 </form>
 
+                <div className="job-card">
                 {
                     this.props.jobs.map((info) => (
                         <div className="job-info" key={info.id}>
-                            <img src={info.company_logo} />
+                             <img src={info.company_logo ? info.company_logo : "https://www.nomadsummit.com/wp-content/uploads/2019/02/CreateAnApp.jpg"} />
                             <p>{info.title} at {info.company}</p>
                             <p>Job Type: {info.type}</p>
+                            <p>{info.location}</p>
 
                         </div>
                     ))
                 }
+                </div>
             </div>
         )
     }

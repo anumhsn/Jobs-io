@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import './App.css';
-import {fetchJobs} from './services/api-helper';
+import {fetchJobs, fetchJobsNoL, fetchJobsNoDes} from './services/api-helper';
 import Header from './components/Header';
 import Search from './components/Search';
 import Footer from './components/Footer';
@@ -16,12 +16,29 @@ class App extends React.Component{
   }
 
   showJobs = async (description, location) => {
-    const jobs = await fetchJobs(description, location);
-    this.setState({
-      jobs: jobs,
-      // description: description
-    })  
+    if(location === ''){
+      const jobsD = await fetchJobsNoL(description);
+      this.setState({
+        jobs: jobsD
+      })
+    }
+    
+    else if(description === ''){
+      const jobsL = await fetchJobsNoDes(location);
+      this.setState({
+        jobs: jobsL
+      })
+    }
+    else {
+      const jobs = await fetchJobs(description, location);
+      this.setState({
+        jobs: jobs,
+        // description: description
+      })  
+    }
   }
+
+
   
   render(){
     return (
