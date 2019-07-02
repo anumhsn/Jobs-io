@@ -5,6 +5,7 @@ import {fetchJobs, fetchJobsNoL, fetchJobsNoDes} from './services/api-helper';
 import Header from './components/Header';
 import Search from './components/Search';
 import Footer from './components/Footer';
+import {Route, Link} from 'react-router-dom'
 
 class App extends React.Component{
   constructor(props){
@@ -47,6 +48,7 @@ class App extends React.Component{
           <Header />
         </header>
         <main>
+          
           <Search 
           // fetchJobs={this.props.fetchJobs}
           showJobs={this.showJobs}

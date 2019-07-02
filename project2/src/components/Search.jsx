@@ -1,5 +1,6 @@
 import React from 'react'
-import {fetchJobs} from '../services/api-helper'
+import {fetchJobs} from '../services/api-helper';
+import {Router, Link} from 'react-router-dom';
 
 class Search extends React.Component{
     constructor(props){
@@ -35,10 +36,9 @@ class Search extends React.Component{
                     this.props.jobs.map((info) => (
                         <div className="job-info" key={info.id}>
                              <img src={info.company_logo ? info.company_logo : "https://www.nomadsummit.com/wp-content/uploads/2019/02/CreateAnApp.jpg"} />
-                            <p>{info.title} at {info.company}</p>
+                            <h3>{info.title} at {info.company}</h3>
                             <p>Job Type: {info.type}</p>
                             <p>{info.location}</p>
-
                         </div>
                     ))
                 }
