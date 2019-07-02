@@ -1,5 +1,7 @@
 body{
   margin: 0;
+  /* background-color: pink; */
+  /* radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); */
 }
 
 .App {
@@ -10,12 +12,16 @@ body{
 .header{
   font-family: 'Megrim', cursive;
   font-size: 35px;
-  color: white;
+  color: turquoise;
 }
 
 .header, .input {
-  background: black;
+  /* background: black; */
   padding: 10px;
+  background: #ECE9E6;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 
 input{
@@ -51,33 +57,40 @@ button:hover {
   justify-content: space-around;
   flex-flow: row;
   flex-wrap: wrap;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin: 30px;
+  /* margin-top: 25px;
+  margin-bottom: 25px; */
+  /* margin: 30px; */
+  /* padding: 20px; */
 }
 
 .job-info{
   /* border: 1px solid black; */
   border-radius: 10px;  
   width: 40%;
-  height: 250px;
+  height: 280px;
   /* padding: 10px; */
   margin-bottom: 20px;
+  /* background-color: white */
   
-  background-color: #f4511e;
+  /* styling taken from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_buttons_fade1 */
+  /* background-color: lightsteelblue;
   border: none;
   color: white;
   padding: 16px 32px;
   text-align: center;
   font-size: 16px;
   margin: 4px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
+  opacity: 0.8;
+  transition: 0.3s; */
+
   
 }
 
 .job-info:hover{
-  opacity: 1
+  /* opacity: 1 */
+  -webkit-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.51);
+  -moz-box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.51);
+  box-shadow: 10px 10px 35px 0px rgba(0,0,0,0.51);
 }
 
 .job-info img{
@@ -85,9 +98,19 @@ button:hover {
   max-width: 550px;
 }
 
+main{
+  margin-bottom: 50px;
+  min-height: 100vh;
+}
+
+/* ONE JOB */
+.one-job img{
+  height: 250px;
+  width: auto;
+}
 /* FOOTER */
 .footer{
-  position: fixed;
+  /* position: absolute; */
   left: 0;
   bottom: 0;
   width: 100%;

@@ -40,6 +40,8 @@ class App extends React.Component{
       })  
     }
   }
+
+
   
   render(){
     return (
@@ -48,17 +50,22 @@ class App extends React.Component{
           <Header />
         </header>
         <main>
-          
-          <Search 
+          <Route exact path="/" render={()=>{
+          return <Search 
           // fetchJobs={this.props.fetchJobs}
           showJobs={this.showJobs}
           jobs={this.state.jobs}
           />
+          }} />
+
           <Route path="/jobs/:id" render={(props)=> {
           const job = this.state.jobs.find(job => job.id === props.match.params.id)
           return <OneJob 
           showJobs={this.showJobs}
-          job={job} /> }}/>
+          job={job} 
+          // jobs={this.state.jobs}
+          
+          /> }}/>
         </main>
         <footer>
           <Footer />

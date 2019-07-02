@@ -35,11 +35,12 @@ class Search extends React.Component{
                 {
                     this.props.jobs.map((info) => (
                         <div className="job-info" key={info.id}>
-                            <Link to={`/jobs/${info.id}`}>More info</Link>
+                            
                              <img src={info.company_logo ? info.company_logo : "https://www.nomadsummit.com/wp-content/uploads/2019/02/CreateAnApp.jpg"} />
                             <h3>{info.title} at {info.company}</h3>
                             <p>Job Type: {info.type}</p>
                             <p>{info.location}</p>
+                            <Link to={`/jobs/${info.id}`}>Click here for additional info</Link>
                         </div>
                     ))
                 }
