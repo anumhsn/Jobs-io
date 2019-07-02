@@ -57,13 +57,27 @@ button:hover {
 }
 
 .job-info{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 10px;  
   width: 40%;
   height: 250px;
-  padding: 10px;
+  /* padding: 10px; */
   margin-bottom: 20px;
   
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+  
+}
+
+.job-info:hover{
+  opacity: 1
 }
 
 .job-info img{

@@ -7,8 +7,7 @@ class OneJob extends React.Component{
     render(){
         return(
             <div className="one-job">
-                <Route path="/jobs/:id" />
-                {/* <Link to="/jobs" onClick={()=> {}}></Link> */}
+                <Link to="/jobs" onClick={()=> {}}></Link>
             </div>
         )
     }

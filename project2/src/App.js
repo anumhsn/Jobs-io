@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Search from './components/Search';
 import Footer from './components/Footer';
 import {Route, Link} from 'react-router-dom'
+import OneJob from './components/OneJob';
 
 class App extends React.Component{
   constructor(props){
@@ -16,6 +17,7 @@ class App extends React.Component{
     }
   }
 
+  //this allows the user to enter one or more inputs and retrieve results
   showJobs = async (description, location) => {
     if(location === ''){
       const jobsD = await fetchJobsNoL(description);
@@ -38,8 +40,6 @@ class App extends React.Component{
       })  
     }
   }
-
-
   
   render(){
     return (
@@ -54,7 +54,11 @@ class App extends React.Component{
           showJobs={this.showJobs}
           jobs={this.state.jobs}
           />
-
+          <Route path="/jobs/:id" render={(props)=> {
+          const job = this.state.jobs.find(job => job.id === props.match.params.id)
+          return <OneJob 
+          showJobs={this.showJobs}
+          job={job} /> }}/>
         </main>
         <footer>
           <Footer />
