@@ -48,6 +48,7 @@ class App extends React.Component{
       <div className="App">
         <header>
           <Header />
+          
         </header>
         <main>
           <Route exact path="/" render={()=>{
