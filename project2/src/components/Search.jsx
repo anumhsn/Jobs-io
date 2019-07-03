@@ -7,7 +7,8 @@ class Search extends React.Component{
         super(props);
         this.state={
             location: '',
-            description: ''
+            description: '',
+            beforeSearch: true
         }
     }
 
@@ -21,7 +22,7 @@ class Search extends React.Component{
         const jobs = this.props.jobs;
         let jobResults;
         
-        if(jobs.length > 0){
+        if(jobs.length > 0 ){
             jobResults=
             <div className="job-card">
                 {
@@ -38,7 +39,7 @@ class Search extends React.Component{
                 }
            </div>   
         }
-        else{
+        else if (jobs.length===0 && this.state.beforeSearch===false){
             jobResults=
             <div className="sorry">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6d7b3952736003.591b008d30b88.png" />
@@ -48,9 +49,12 @@ class Search extends React.Component{
         return(
             <div className="search">
                 <form className="input" onSubmit={(e)=>{
+ 
                     e.preventDefault();
+                    this.setState({
+                        beforeSearch: false
+                    })
                     this.props.showJobs(this.state.description, this.state.location)
-                    // this.props.showJobs()
 
                 }}>
                     <input name="location" placeholder="location..." type="text" onChange={this.handleChange}/>

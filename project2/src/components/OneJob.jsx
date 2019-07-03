@@ -9,7 +9,6 @@ class OneJob extends React.Component{
     render(){
         return(
             <div className="one-job">
-                {/* <h1>{JSON.stringify(this.props.job)}</h1> */}
                 <div className="data">
                     <h2>{this.props.job.title}</h2>
                     <h3>Company: {this.props.job.company}</h3>

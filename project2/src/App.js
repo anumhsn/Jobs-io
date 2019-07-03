@@ -13,7 +13,6 @@ class App extends React.Component{
     super(props);
     this.state={
       jobs: [],
-      // description: ''
     }
   }
 
@@ -36,7 +35,6 @@ class App extends React.Component{
       const jobs = await fetchJobs(description, location);
       this.setState({
         jobs: jobs,
-        // description: description
       })  
     }
   }
@@ -51,9 +49,10 @@ class App extends React.Component{
           
         </header>
         <main>
+
           <Route exact path="/" render={()=>{
           return <Search 
-          // fetchJobs={this.props.fetchJobs}
+
           showJobs={this.showJobs}
           jobs={this.state.jobs}
           />
@@ -64,7 +63,6 @@ class App extends React.Component{
           return <OneJob 
           showJobs={this.showJobs}
           job={job} 
-          // jobs={this.state.jobs}
           
           /> }}/>
         </main>
