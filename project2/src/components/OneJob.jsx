@@ -14,6 +14,7 @@ class OneJob extends React.Component{
                     <h3>Company: {this.props.job.company}</h3>
                     <img src={this.props.job.company_logo ? this.props.job.company_logo : "https://www.nomadsummit.com/wp-content/uploads/2019/02/CreateAnApp.jpg"}  />
                     <h4>This position is: {this.props.job.type}</h4>
+                    <p>{this.props.job.company_url}</p>
                 </div>
                 <div className="more-data">
                     <div dangerouslySetInnerHTML={this.createMarkup()} />

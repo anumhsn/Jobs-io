@@ -120,6 +120,7 @@ main{
   border: 1px solid black;
   width: 60%;
   background-color: lightgrey;
+  margin-bottom: 30px;
 } 
 
 .data .more-data{
@@ -134,7 +135,7 @@ main{
   background-color: black;
   color: white;
   text-align: center;
-  padding: 1px;
+  /* padding: 1px; */
   position: fixed;
 }
 
@@ -169,9 +170,7 @@ and (max-width: 700px){
     display: block;
     float: left;
     width: 100%;
+    margin-bottom: 30px;
   }
 
-  footer{
-    
-  }
 }
