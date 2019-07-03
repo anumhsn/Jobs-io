@@ -34,13 +34,15 @@ class App extends React.Component{
     else if(description === ''){
       const jobsL = await fetchJobsNoDes(location);
       this.setState({
-        jobs: jobsL
+        jobs: jobsL,
+        isLoading: false
       })
     }
     else {
       const jobs = await fetchJobs(description, location);
       this.setState({
         jobs: jobs,
+        isLoading: false,
       })  
     }
   }
