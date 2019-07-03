@@ -2,11 +2,19 @@
 
 ## Project Overview
 
+
 ## Project Description:
-This will be a functional react app that will show the available jobs on GitHub based on location, type of job, and whether its full time or not
+This React app uses the GitHub API to retrieve available job postings based on user input. User input can be either location, or a regular search paramater that the job posting contains (e.g. full time, python, Apple)
 
 ## Wireframes:
 ![](https://i.imgur.com/fp2bzMP.png)
+
+##Build
+- fork and clone this repository
+- cd into project2 
+- run ```npm install react-router-dom```
+- run ```npm install axios```
+- run ```npm start```
 
 ## MVP:
 - Using the GitHub API, the user can search for available jobs posted on GitHub and narrow that search by specifying the location and the type of job.
@@ -19,6 +27,22 @@ This will be a functional react app that will show the available jobs on GitHub 
 ## React Component Hierarchy
 - Home component 
     - Header component
-    - Search bar component
-    - Main component where jobs are rendered
+    - Search bar component which shows results of searches
+    - OneJob component that shows more information about each job
     - Footer 
+
+## Code Snippet
+From OneJob.jsx
+
+```js 
+createMarkup = () => { 
+        return {__html: this.props.job.description}; 
+    };
+
+   render(){
+       return(
+            <div className="more-data">
+                <div dangerouslySetInnerHTML={this.createMarkup()} />
+            </div>
+       )
+   }```
