@@ -39,7 +39,7 @@ class Search extends React.Component{
                 }
            </div>   
         }
-        else if (jobs.length===0 && this.state.beforeSearch===false){
+        else if (jobs.length===0 && this.state.beforeSearch===false && this.props.isLoading===false){
             jobResults=
             <div className="sorry">
                 <img src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/6d7b3952736003.591b008d30b88.png" />

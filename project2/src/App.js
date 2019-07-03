@@ -13,15 +13,21 @@ class App extends React.Component{
     super(props);
     this.state={
       jobs: [],
+      isLoading: false
     }
   }
 
   //this allows the user to enter one or more inputs and retrieve results
   showJobs = async (description, location) => {
+    this.setState({
+      isLoading: true
+    })
+
     if(location === ''){
       const jobsD = await fetchJobsNoL(description);
       this.setState({
-        jobs: jobsD
+        jobs: jobsD,
+        isLoading: false
       })
     }
     
@@ -52,7 +58,7 @@ class App extends React.Component{
 
           <Route exact path="/" render={()=>{
           return <Search 
-
+          isLoading={this.state.isLoading}
           showJobs={this.showJobs}
           jobs={this.state.jobs}
           />
