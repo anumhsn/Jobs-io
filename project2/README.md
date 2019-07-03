@@ -9,7 +9,7 @@ This React app uses the GitHub API to retrieve available job postings based on u
 ## Wireframes:
 ![](https://i.imgur.com/fp2bzMP.png)
 
-##Build
+## Build
 - fork and clone this repository
 - cd into project2 
 - run ```npm install react-router-dom```
@@ -32,6 +32,8 @@ This React app uses the GitHub API to retrieve available job postings based on u
     - Footer 
 
 ## Code Snippet
+The GitHub API has the job description hardcoded as HTML, thus when initially rendering this data, all one sees is a string with html tags and its following data. To make that string comply with the HTML tags, the following code is used:
+
 From OneJob.jsx
 
 ```js 
