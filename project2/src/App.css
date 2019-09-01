@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body{
   margin: 0;
 
@@ -14,12 +18,20 @@ body{
   width: 100vw;
   position: relative;
 }
-
+/* ---- to place greeting on image, code taken from https://www.w3schools.com/howto/howto_css_image_text.asp */
 .landing-greeting{
   position: absolute;
-  top: 50%;
+  top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.landing-greeting a {
+  text-decoration: none;
+  color: white;
+}
+.landing-greeting h3 {
+  color: white;
 }
 /* HEADER */
 .header{
