@@ -55,12 +55,14 @@ class App extends React.Component{
       <div className="App">
         <div className="landing">
           <img src={landing}/>
+          <h3>Ready to start your job hunt?</h3>
+          <a href="#site">Enter Site</a>
         </div>
-        <header>
+        <header id="site">
           <Header />
           
         </header>
-        <main>
+        <main >
 
           <Route exact path="/" render={()=>{
           return <Search 
