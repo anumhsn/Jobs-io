@@ -7,6 +7,7 @@ import Search from './components/Search';
 import Footer from './components/Footer';
 import {Route, Link} from 'react-router-dom'
 import OneJob from './components/OneJob';
+import landing from './services/images/landing-img.jpg';
 
 class App extends React.Component{
   constructor(props){
@@ -53,7 +54,7 @@ class App extends React.Component{
     return (
       <div className="App">
         <div className="landing">
-          <img src="https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80"/>
+          <img src={landing}/>
         </div>
         <header>
           <Header />
