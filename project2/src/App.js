@@ -52,6 +52,9 @@ class App extends React.Component{
   render(){
     return (
       <div className="App">
+        <div className="landing">
+          <img src="https://images.unsplash.com/photo-1489844097929-c8d5b91c456e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1504&q=80"/>
+        </div>
         <header>
           <Header />
           
@@ -75,7 +78,7 @@ class App extends React.Component{
           /> }}/>
         </main>
         <footer>
-          <Footer />
+          {/* <Footer /> */}
         </footer>
         
       </div>

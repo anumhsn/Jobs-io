@@ -7,6 +7,10 @@ body{
   text-align: center;
 }
 
+/* LANDING */
+.landing img{
+  background-size: cover;
+}
 /* HEADER */
 .header{
   font-family: 'Megrim', cursive;
