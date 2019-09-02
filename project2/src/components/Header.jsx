@@ -6,6 +6,7 @@ class Header extends React.Component{
         return(
             <div className="header">
                  <Link to="/">jobs.io</Link>
+                 <Link to="/">Home</Link>
             </div>
         )
     }

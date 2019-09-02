@@ -61,28 +61,29 @@ class App extends React.Component{
             <a href="#site">Enter Site</a>
           </div>
         </div>
-        <header id="site">
-          <Header />
-          
-        </header>
-        <main >
+        <div className="full-site">
+          <header id="site">
+            <Header />
+          </header>
+          <main >
 
-          <Route exact path="/" render={()=>{
-          return <Search 
-          isLoading={this.state.isLoading}
-          showJobs={this.showJobs}
-          jobs={this.state.jobs}
-          />
-          }} />
+            <Route exact path="/" render={()=>{
+            return <Search 
+            isLoading={this.state.isLoading}
+            showJobs={this.showJobs}
+            jobs={this.state.jobs}
+            />
+            }} />
 
-          <Route path="/jobs/:id" render={(props)=> {
-          const job = this.state.jobs.find(job => job.id === props.match.params.id)
-          return <OneJob 
-          showJobs={this.showJobs}
-          job={job} 
-          
-          /> }}/>
-        </main>
+            <Route path="/jobs/:id" render={(props)=> {
+            const job = this.state.jobs.find(job => job.id === props.match.params.id)
+            return <OneJob 
+            showJobs={this.showJobs}
+            job={job} 
+            
+            /> }}/>
+          </main>
+        </div>
         <footer>
           {/* <Footer /> */}
         </footer>
