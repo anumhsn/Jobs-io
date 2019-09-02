@@ -5,8 +5,8 @@ class Header extends React.Component{
     render(){
         return(
             <div className="header">
-                 <Link to="/">jobs.io</Link>
-                 <Link to="/">Home</Link>
+                <Link className="home-link" to="/">Home</Link>
+                <Link to="/">jobs.io</Link>
             </div>
         )
     }

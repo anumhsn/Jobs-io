@@ -60,9 +60,11 @@ body{
   padding: 50px;
 }
 
-
-.header, .input {
-  
+.home-link{
+  color: white;
+  font-size: 20px;
+  float: left;
+  text-decoration: underline;
 }
 
 header a{
@@ -70,7 +72,6 @@ header a{
   font-size: 100px;
   font-weight: bold;
   color: white;
-  color: black;
 }
 
 /* INPUT FORM */
